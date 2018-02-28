@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AirlineTask
+namespace AirlineTask.Passengers
 {
-    class Program
+    class Passenger
     {
-        static void Main(string[] args)
-        {
-        }
+
     }
 }
