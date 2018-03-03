@@ -10,6 +10,13 @@ namespace AirlineTask.Flights
     public sealed class Flight
     {
 
+        
+        private readonly string city; 
+        private readonly string flightNumber;
+        private readonly Tuple<DateTime, DateTime> arrivalAndDeparture;
+        private readonly Tuple<string, string> terminalAndGates;
+        private readonly FlightStatus flightStatus = FlightStatus.Unknown;
+
         private List<Passenger> flightPassengers;
     }
 }

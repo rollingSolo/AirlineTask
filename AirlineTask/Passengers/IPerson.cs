@@ -12,6 +12,7 @@ namespace AirlineTask.Passengers
         string Surname { get; set; }
         string Nationality { get; set; }
 
+        int AccessLevel { get; }
         DateTime Birthday { get; }
 
         Sex sex { get; }
