@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace AirlineTask.Passengers
 {
-    class Administrator
+    class Administrator : Passenger
     {
-
+        public override AccessLevels AccessLevel
+        {
+            get
+            {
+                return AccessLevels.Administrator;
+            }
+        }
     }
 }

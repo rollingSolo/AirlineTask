@@ -6,19 +6,14 @@ using System.Threading.Tasks;
 
 namespace AirlineTask.Passengers
 {
-    class Worker:Passenger
+    class User : Passenger
     {
         public override AccessLevels AccessLevel
         {
             get
             {
-                return AccessLevels.Worker;
+                return AccessLevels.User;
             }
-        }
-
-        public void Show()
-        {
-            Console.WriteLine(this.ToString());
         }
     }
 }

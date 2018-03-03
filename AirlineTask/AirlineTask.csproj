@@ -49,6 +49,7 @@
     <Compile Include="Passengers\IPerson.cs" />
     <Compile Include="Passengers\Passenger.cs" />
     <Compile Include="Passengers\Sex.cs" />
+    <Compile Include="Passengers\User.cs" />
     <Compile Include="Passengers\Worker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Terminal.cs" />

@@ -9,14 +9,17 @@ namespace AirlineTask.Flights
 {
     public sealed class Flight
     {
+        private List<Passenger> flightPassengers;
+        public string City { get; }
+        public string FlightNumber { get; }
+        public  Tuple<DateTime, DateTime> ArrivalAndDeparture { get; }
+        public Tuple<string, string> TerminalAndGates { get; }
+        public FlightStatus FlightStatus { get; set; }
 
         
-        private readonly string city; 
-        private readonly string flightNumber;
-        private readonly Tuple<DateTime, DateTime> arrivalAndDeparture;
-        private readonly Tuple<string, string> terminalAndGates;
-        private readonly FlightStatus flightStatus = FlightStatus.Unknown;
 
-        private List<Passenger> flightPassengers;
+
+
+
     }
 }

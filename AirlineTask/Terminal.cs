@@ -10,7 +10,7 @@ namespace AirlineTask
 {
     class Terminal
     {
-        private List<Passenger> passengers;
+        
         private List<Flight> flights;
 
 
