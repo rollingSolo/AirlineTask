@@ -15,5 +15,23 @@ namespace AirlineTask.Passengers
                 return AccessLevels.User;
             }
         }
+
+        public override void ShowTerminalCommands()
+        {
+            Terminal terminal = new Terminal();
+            Console.WriteLine("What are you looking for ?");
+
+            string text = Console.ReadLine();
+
+            switch (text)
+            {
+                case "1":
+                    terminal.PrintFlightsInfo();
+                    break;
+                default:
+                    break;
+            }
+
+        }
     }
 }

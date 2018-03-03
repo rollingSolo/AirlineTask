@@ -15,5 +15,10 @@ namespace AirlineTask.Passengers
                 return AccessLevels.Administrator;
             }
         }
+
+        public override void ShowTerminalCommands()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

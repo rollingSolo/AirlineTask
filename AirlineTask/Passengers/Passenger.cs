@@ -31,5 +31,8 @@ namespace AirlineTask.Passengers
             Sex = (Sex)sex;
         }
 
+        public abstract void ShowTerminalCommands();
+        
+
     }
 }
