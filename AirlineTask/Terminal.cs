@@ -10,8 +10,13 @@ namespace AirlineTask
 {
     class Terminal
     {
-        
-        private List<Flight> flights;
+
+        private List<Flight> flights = new List<Flight>()
+        {
+            new Flight(),
+            new Flight(),
+            new Flight()
+        };
 
 
 

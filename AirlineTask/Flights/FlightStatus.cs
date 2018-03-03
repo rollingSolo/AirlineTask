@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AirlineTask.Flights
 {
-    enum FlightStatus
+   public enum FlightStatus
     {
         CheckIn,
         GateClosed,
