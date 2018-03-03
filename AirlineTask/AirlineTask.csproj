@@ -47,7 +47,6 @@
     <Compile Include="Flights\FlightStatus.cs" />
     <Compile Include="Passengers\AccessLevels.cs" />
     <Compile Include="Passengers\Administrator.cs" />
-    <Compile Include="Passengers\IPerson.cs" />
     <Compile Include="Passengers\Passenger.cs" />
     <Compile Include="Passengers\Sex.cs" />
     <Compile Include="Passengers\User.cs" />

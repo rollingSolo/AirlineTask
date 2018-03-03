@@ -12,7 +12,12 @@ namespace AirlineTask
     {
         static void Main(string[] args)
         {
+            Terminal terminal = new Terminal();
+            terminal.PrintFlightsInfo();
 
+
+
+            Console.ReadKey();
         }
 
     }

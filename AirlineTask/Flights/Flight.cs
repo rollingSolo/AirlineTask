@@ -13,7 +13,7 @@ namespace AirlineTask.Flights
         public string City { get; }
         public string FlightNumber { get; }
         public Tuple<string, string> TerminalAndGates { get; }
-        public FlightStatus FlightStatus { get; set; }
+        public FlightStatus FlightStatus { get; }
         public List<Passenger> flightPassengers { get; set; }
 
 
@@ -36,6 +36,17 @@ namespace AirlineTask.Flights
             this.FlightStatus = (FlightStatus)flightStatus;
         }
 
+
+        public void GetFlightInfo()
+        {
+            Console.WriteLine($"Flight № {this.FlightNumber} \r\n" +
+                $"Arrival: {this.ArrivalAndDeparture.Item1} \r\n" +
+                $"Departure: {this.ArrivalAndDeparture.Item2} \r\n" +
+                $"Flight Number {this.FlightNumber} \r\n" +
+                $"Terminal: {this.TerminalAndGates.Item1} \r\n" +
+                $"Gates: {this.TerminalAndGates.Item2} \r\n" +
+                $"Flight status: {this.FlightStatus} \r\n");
+        }
 
 
 
