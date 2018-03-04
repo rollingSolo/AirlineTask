@@ -16,8 +16,24 @@ namespace AirlineTask.Flights
         public FlightStatus FlightStatus { get; }
         public List<Passenger> flightPassengers = new List<Passenger>()
         {
-            new User("Vasiliy","Petrovich","Kumys","BT228337","2017-05-01T07",0,"Budget",228),
-            new User("Svetlana","Petrovna","Kumys","BT228449","2017-05-01T07",1,"Premium",449)
+            new User("Vasiliy",
+                     "Petrovich",
+                     "Kumys",
+                     "BT228337",
+                     "2017-05-01T07:34:42-5:00",
+                     0,
+                     "Budget",
+                     228),
+
+
+            new User("Svetlana",
+                     "Petrovna",
+                     "Kumys",
+                     "BT228449",
+                     "2017-05-01T07:34:42-5:00",
+                     1,
+                     "Premium",
+                     449)
         };
 
 
@@ -100,6 +116,7 @@ namespace AirlineTask.Flights
             foreach (var item in flightPassengers)
             {
                 item.ShowInfo();
+                
             }
         }
 

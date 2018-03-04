@@ -54,6 +54,9 @@ namespace AirlineTask.Passengers
                 case "1":
                     terminal.PrintFlightsInfo();
                     break;
+                case "2":
+                    terminal.ShowPassengersByFlightNumber();
+                    break;
                 default:
                     break;
             }

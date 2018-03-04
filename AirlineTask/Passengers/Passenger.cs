@@ -43,7 +43,10 @@ namespace AirlineTask.Passengers
 
         public virtual void ShowInfo()
         {
-
+            Console.WriteLine($"Name: {this.Name}\r\n" +
+                              $"Last Name: {this.Surname}\r\n" +
+                              $"Passport: {this.Passport}\r\n" +
+                              $"Airplane Class: {this.ticket.Class}\r\n");
         }
         public abstract void ShowTerminalCommands();
         
