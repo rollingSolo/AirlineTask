@@ -52,12 +52,24 @@ namespace AirlineTask
             }
         }
 
+
+
         public void PrintingFor()
         {
             Console.WriteLine("idi nahuy");
         }
 
-        
+        public void ShowPassengersByFlightNumber()
+        {
+            
+            foreach (var item in flights)
+            {
+                foreach (var secondItem in item.flightPassengers)
+                {
+                    secondItem.ShowInfo();
+                }
+            }
+        }
         
     }
 

@@ -41,6 +41,10 @@ namespace AirlineTask.Passengers
             ticket = new Ticket(airClass, ticketPrice);
         }
 
+        public virtual void ShowInfo()
+        {
+
+        }
         public abstract void ShowTerminalCommands();
         
 

@@ -14,7 +14,11 @@ namespace AirlineTask.Flights
         public string FlightNumber { get; }
         public Tuple<string, string> TerminalAndGates { get; }
         public FlightStatus FlightStatus { get; }
-        public List<Passenger> flightPassengers { get; set; }
+        public List<Passenger> flightPassengers = new List<Passenger>()
+        {
+            new User("Vasiliy","Petrovich","Kumys","BT228337","2017-05-01T07",0,"Budget",228),
+            new User("Svetlana","Petrovna","Kumys","BT228449","2017-05-01T07",1,"Premium",449)
+        };
 
 
         public Flight(string arrival,
@@ -41,7 +45,7 @@ namespace AirlineTask.Flights
             Console.WriteLine($"Flight № {this.FlightNumber} \r\n" +
                 $"Arrival: {this.ArrivalAndDeparture.Item1} \r\n" +
                 $"Departure: {this.ArrivalAndDeparture.Item2} \r\n" +
-                $"Flight Number {this.FlightNumber} \r\n" +
+                $"Flight Number: {this.FlightNumber} \r\n" +
                 $"Terminal: {this.TerminalAndGates.Item1} \r\n" +
                 $"Gates: {this.TerminalAndGates.Item2} \r\n" +
                 $"Flight status: {this.FlightStatus} \r\n");
@@ -90,6 +94,17 @@ namespace AirlineTask.Flights
             return flightPassengers;
         }
 
+
+        public void ShowPassengers()
+        {
+            foreach (var item in flightPassengers)
+            {
+                item.ShowInfo();
+            }
+        }
+
+
+        
 
 
     }
