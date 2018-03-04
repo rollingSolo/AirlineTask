@@ -22,10 +22,13 @@ namespace AirlineTask
                                2 - Worker
                                3 - User");
 
+            
+
             string identitylInput = Console.ReadLine();
 
             Passenger human = CheckIdentity(identitylInput);
 
+            Console.WriteLine($"\r\nAccess Level - {human.AccessLevel}");
             while (true)
             {
                 human.ShowTerminalCommands();

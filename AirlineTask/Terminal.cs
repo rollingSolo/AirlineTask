@@ -22,35 +22,29 @@ namespace AirlineTask
                        7),
             new Flight("2008-05-01T07:34:42-5:00",
                        "2008-05-01T07:34:42-5:00",
-                       "NewYork",
+                       "Panama",
                        "45693",
                        "9B",
                        "South",
                        7),
             new Flight("2008-05-01T07:34:42-5:00",
                        "2008-05-01T07:34:42-5:00",
-                       "NewYork",
+                       "Odessa",
                        "45693",
                        "9B",
-                       "South",
+                       "North",
                        7),
             new Flight("2008-05-01T07:34:42-5:00",
                        "2008-05-01T07:34:42-5:00",
-                       "NewYork",
+                       "Kiev",
                        "45693",
                        "9B",
-                       "South",
+                       "North",
                        7)
 
         };
 
-
-
-
-
-
-
-        public  void PrintFlightsInfo()
+        public void PrintFlightsInfo()
         {
             foreach (var item in flights)
             {

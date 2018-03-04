@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AirlineTask.Passengers
 {
-    class Administrator : Passenger
+    public class Administrator : Passenger
     {
         public override AccessLevels AccessLevel
         {
@@ -16,6 +16,30 @@ namespace AirlineTask.Passengers
             }
         }
 
+        public Administrator()
+        {
+
+        }
+        public Administrator(string name,
+                             string surName,
+                             string nationality,
+                             string passport,
+                             string birthday,
+                             int sex,
+                             string airClass,
+                             double ticketPrice) :
+
+                            base(name,
+                                surName,
+                                nationality,
+                                passport,
+                                birthday,
+                                sex,
+                                airClass,
+                                ticketPrice)
+        {
+
+        }
         public override void ShowTerminalCommands()
         {
             throw new NotImplementedException();

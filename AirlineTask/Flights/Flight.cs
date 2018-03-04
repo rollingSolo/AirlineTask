@@ -9,7 +9,7 @@ namespace AirlineTask.Flights
 {
     public sealed class Flight
     {
-        public Tuple<DateTime, DateTime> ArrivalAndDeparture { get; }
+        private Tuple<DateTime, DateTime> ArrivalAndDeparture { get; }
         public string City { get; }
         public string FlightNumber { get; }
         public Tuple<string, string> TerminalAndGates { get; }
@@ -27,8 +27,7 @@ namespace AirlineTask.Flights
         {
             this.ArrivalAndDeparture = new Tuple<DateTime, DateTime>
                                   ( DateTime.Parse(arrival), 
-                                    DateTime.Parse(departure)
-                                  );
+                                    DateTime.Parse(departure));
 
             this.City = city;
             this.FlightNumber = flightNumber;
@@ -46,6 +45,49 @@ namespace AirlineTask.Flights
                 $"Terminal: {this.TerminalAndGates.Item1} \r\n" +
                 $"Gates: {this.TerminalAndGates.Item2} \r\n" +
                 $"Flight status: {this.FlightStatus} \r\n");
+        }
+
+
+        public List<Passenger> AddPassenger()
+        {
+            Console.WriteLine("Enter your Firstname:");
+            string passengerName = Console.ReadLine();
+
+            Console.WriteLine("Enter your Lastname:");
+            string passengerSurname = Console.ReadLine();
+
+            Console.WriteLine("Enter your Nationality:");
+            string nationality = Console.ReadLine();
+
+            Console.WriteLine("Enter Passport Information (Example MT2827512):");
+            string passportInfo = Console.ReadLine();
+
+            Console.WriteLine("Enter your Birthday:");
+            string birthday = Console.ReadLine();
+
+            Console.WriteLine(@"Enter your sex from the two proposed:
+                              0 - Male
+                              1 - Female");
+            int sex  = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter the Airplane Class:");
+            string airPlaneClass = Console.ReadLine();
+
+            Console.WriteLine("Enter the Ticket Price:");
+            double ticketPrice  = double.Parse(Console.ReadLine());
+
+            var passenger = new User(passengerName, 
+                                     passengerSurname, 
+                                     nationality, 
+                                     passportInfo, 
+                                     birthday, 
+                                     sex,
+                                     airPlaneClass,
+                                     ticketPrice);
+            flightPassengers.Add(passenger);
+
+
+            return flightPassengers;
         }
 
 
