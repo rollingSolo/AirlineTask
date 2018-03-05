@@ -13,7 +13,8 @@ namespace AirlineTask
     {
         static void Main(string[] args)
         {
-            Console.WriteLine($"Hi, Olga!! Welcome to AirLine Terminal, today {DateTime.Now} \r\n" +
+            Console.WriteLine($"Hi, Olga!! Welcome to AirLine Terminal, " +
+                              $"today {DateTime.Now} \r\n" +
                               $"Press Enter to continue");
             
 

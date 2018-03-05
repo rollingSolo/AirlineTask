@@ -42,9 +42,41 @@ namespace AirlineTask.Passengers
         }
         public override void ShowTerminalCommands()
         {
-            throw new NotImplementedException();
-        }
+            Terminal terminal = new Terminal();
+            Console.WriteLine(@"What are you looking for?
+                                0 - Printing all flights
+                                1 - Printing all flight’s passengers by flight number
+                                2 - Searching passengers by Name or Last Name
+                                3 - Searching passengers by Passport
+                                4 - Add Flight");
 
-        
+            string text = Console.ReadLine();
+
+            switch (text)
+            {
+                case "0":
+                    terminal.PrintAllFlightsInfo();
+                    break;
+                case "1":
+                    terminal.SearchPassengersByFlightNumber();
+                    break;
+
+                case "2":
+                    terminal.SearchPassengersByName();
+                    break;
+
+                case "3":
+                    terminal.SearchPassengersByPassport();
+                    break;
+
+                case "4":
+                    terminal.AddFlight();
+                    break;
+
+                default:
+                    break;
+            }
+
+        }
     }
 }

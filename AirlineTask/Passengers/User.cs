@@ -45,21 +45,11 @@ namespace AirlineTask.Passengers
         public override void ShowTerminalCommands()
         {
             Terminal terminal = new Terminal();
-            Console.WriteLine("What are you looking for ?");
+            Console.WriteLine("Hi please press enter to see all flights");
 
-            string text = Console.ReadLine();
+            Console.ReadLine();
 
-            switch (text)
-            {
-                case "1":
-                    terminal.PrintAllFlightsInfo();
-                    break;
-                case "2":
-                    terminal.SearchPassengersByFlightNumber();
-                    break;
-                default:
-                    break;
-            }
+            terminal.PrintAllFlightsInfo();
 
         }
 

@@ -9,7 +9,7 @@ namespace AirlineTask.Flights
 {
     public sealed class Flight
     {
-        private Tuple<DateTime, DateTime> ArrivalAndDeparture { get; }
+        public Tuple<DateTime, DateTime> ArrivalAndDeparture { get; }
         public string City { get; }
         public string FlightNumber { get; }
         public Tuple<string, string> TerminalAndGates { get; }

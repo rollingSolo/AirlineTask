@@ -52,12 +52,7 @@ namespace AirlineTask
             }
         }
 
-
-
-        public void PrintingFor()
-        {
-            Console.WriteLine("idi nahuy");
-        }
+        
 
         public void SearchPassengersByFlightNumber()
         {
@@ -116,7 +111,7 @@ namespace AirlineTask
             }
         }
 
-        public List<Flight> AddFlight()
+        public void AddFlight()
         {   
 
             Console.WriteLine("Enter the flight number:");
@@ -152,16 +147,19 @@ namespace AirlineTask
             int flightStatus = int.Parse(Console.ReadLine());
 
 
-            var flight = new Flight(arrival,
+            
+            flights.Add(new Flight(arrival,
                                     departure,
                                     city,
                                     flightNumber,
                                     terminal,
                                     gates,
-                                    flightStatus);
-            flights.Add(flight);
+                                    flightStatus));
 
-            return flights;
+            PrintAllFlightsInfo();
+
+
+
         }
 
     }
