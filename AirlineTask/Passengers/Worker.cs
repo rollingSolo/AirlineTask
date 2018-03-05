@@ -58,11 +58,14 @@ namespace AirlineTask.Passengers
             switch (text)
             {
                 case "1":
-                    terminal.PrintingFor();
+                    terminal.ShowPassengersByFlightNumber();
                     break;
                 default:
                     break;
             }
         }
+
+
+        
     }
 }

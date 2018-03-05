@@ -33,7 +33,9 @@ namespace AirlineTask.Flights
                      "2017-05-01T07:34:42-5:00",
                      1,
                      "Premium",
-                     449)
+                     449),
+
+            
         };
 
 
@@ -79,15 +81,16 @@ namespace AirlineTask.Flights
             Console.WriteLine("Enter your Nationality:");
             string nationality = Console.ReadLine();
 
-            Console.WriteLine("Enter Passport Information (Example MT2827512):");
+            Console.WriteLine("Enter Passport Information (example MT2827512):");
             string passportInfo = Console.ReadLine();
 
-            Console.WriteLine("Enter your Birthday:");
+            Console.WriteLine("Enter your Birthday (example 2017-05-01T07:34:42-5:00):");
             string birthday = Console.ReadLine();
 
             Console.WriteLine(@"Enter your sex from the two proposed:
                               0 - Male
                               1 - Female");
+
             int sex  = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Enter the Airplane Class:");
@@ -119,6 +122,8 @@ namespace AirlineTask.Flights
                 
             }
         }
+
+        
 
 
         

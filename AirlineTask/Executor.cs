@@ -12,7 +12,7 @@ namespace AirlineTask
     {
         static void Main(string[] args)
         {
-            Console.WriteLine($"Welcome to AirLine Terminal, today {DateTime.Now} \r\n" +
+            Console.WriteLine($"Hi, Olga!! Welcome to AirLine Terminal, today {DateTime.Now} \r\n" +
                               $"Press Enter to continue");
 
             Console.ReadLine();
@@ -29,6 +29,7 @@ namespace AirlineTask
             Passenger human = CheckIdentity(identitylInput);
 
             Console.WriteLine($"\r\nAccess Level - {human.AccessLevel}");
+
             while (true)
             {
                 human.ShowTerminalCommands();

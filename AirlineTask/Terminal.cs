@@ -70,7 +70,55 @@ namespace AirlineTask
                 }
             }
         }
-        
+
+        public List<Flight> AddFlight()
+        {   
+
+            Console.WriteLine("Enter the flight number:");
+            string flightNumber = Console.ReadLine();
+
+            Console.WriteLine("Enter the City");
+            string city = Console.ReadLine();
+
+            Console.WriteLine("Enter the date of arrival (example 2017-05-01T07:34:42-5:00):");
+            string arrival = Console.ReadLine();
+
+            Console.WriteLine("Enter the date of departure (example 2017-05-01T07:34:42-5:00):");
+            string departure = Console.ReadLine();
+
+            Console.WriteLine("Enter the terminal");
+            string terminal = Console.ReadLine();
+
+            Console.WriteLine("Enter the gates");
+            string gates = Console.ReadLine();
+
+
+            Console.WriteLine(@"Enter the flight status: 
+                               0 - CheckIn
+                               1 - GateClosed
+                               2 - Arrived
+                               3 - Departure
+                               4 - Unknown
+                               5 - Canceled
+                               6 - Expected
+                               7 - Delay
+                               8 - InFlight ");
+
+            int flightStatus = int.Parse(Console.ReadLine());
+
+
+            var flight = new Flight(arrival,
+                                    departure,
+                                    city,
+                                    flightNumber,
+                                    terminal,
+                                    gates,
+                                    flightStatus);
+            flights.Add(flight);
+
+            return flights;
+        }
+
     }
 
 

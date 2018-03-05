@@ -46,7 +46,10 @@ namespace AirlineTask.Passengers
             Console.WriteLine($"Name: {this.Name}\r\n" +
                               $"Last Name: {this.Surname}\r\n" +
                               $"Passport: {this.Passport}\r\n" +
-                              $"Airplane Class: {this.ticket.Class}\r\n");
+                              $"Airplane Class: {this.ticket.Class}\r\n"
+                              $"Birthday: {this.Birthday}\r\n" +
+                              $"Nationality: {this.Nationality}\r\n" +
+                              $"Sex: {this.Sex}");
         }
         public abstract void ShowTerminalCommands();
         
