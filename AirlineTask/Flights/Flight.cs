@@ -34,8 +34,16 @@ namespace AirlineTask.Flights
                      1,
                      "Premium",
                      449),
+            new User("Svetlana",
+                     "Petrovna",
+                     "Kumys",
+                     "BT228449",
+                     "2017-05-01T07:34:42-5:00",
+                     1,
+                     "Premium",
+                     449)
 
-            
+
         };
 
 

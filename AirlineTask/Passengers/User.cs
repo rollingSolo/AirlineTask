@@ -52,10 +52,10 @@ namespace AirlineTask.Passengers
             switch (text)
             {
                 case "1":
-                    terminal.PrintFlightsInfo();
+                    terminal.PrintAllFlightsInfo();
                     break;
                 case "2":
-                    terminal.ShowPassengersByFlightNumber();
+                    terminal.SearchPassengersByFlightNumber();
                     break;
                 default:
                     break;

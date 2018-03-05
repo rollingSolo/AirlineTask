@@ -8,10 +8,10 @@ namespace AirlineTask.Passengers
 {
     public abstract class Passenger
     {
-        protected string Name { get; set; }
-        protected string Surname { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
         protected string Nationality { get; set; }
-        protected string Passport { get; }
+        public string Passport { get; }
         protected DateTime Birthday { get; }
         protected Sex Sex { get; set; }
         protected Ticket ticket;
@@ -46,10 +46,10 @@ namespace AirlineTask.Passengers
             Console.WriteLine($"Name: {this.Name}\r\n" +
                               $"Last Name: {this.Surname}\r\n" +
                               $"Passport: {this.Passport}\r\n" +
-                              $"Airplane Class: {this.ticket.Class}\r\n"
+                              $"Airplane Class: {this.ticket.Class}\r\n"+
                               $"Birthday: {this.Birthday}\r\n" +
                               $"Nationality: {this.Nationality}\r\n" +
-                              $"Sex: {this.Sex}");
+                              $"Sex: {this.Sex}\r\n");
         }
         public abstract void ShowTerminalCommands();
         

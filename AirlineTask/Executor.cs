@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using AirlineTask.Flights;
 using AirlineTask.Passengers;
@@ -14,6 +15,7 @@ namespace AirlineTask
         {
             Console.WriteLine($"Hi, Olga!! Welcome to AirLine Terminal, today {DateTime.Now} \r\n" +
                               $"Press Enter to continue");
+            
 
             Console.ReadLine();
 
@@ -55,8 +57,8 @@ namespace AirlineTask
                     throw new FormatException("Incorrect input");
             }
 
-            
         }
 
+        
     }
 }

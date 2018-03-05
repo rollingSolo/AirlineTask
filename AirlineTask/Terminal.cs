@@ -16,35 +16,35 @@ namespace AirlineTask
             new Flight("2017-05-01T07:34:42-5:00",
                        "2017-05-02T07:34:42-5:00",
                        "NewYork",
-                       "45693",
+                       "102",
                        "9B",
                        "South",
                        7),
             new Flight("2008-05-01T07:34:42-5:00",
                        "2008-05-01T07:34:42-5:00",
                        "Panama",
-                       "45693",
+                       "103",
                        "9B",
                        "South",
                        7),
             new Flight("2008-05-01T07:34:42-5:00",
                        "2008-05-01T07:34:42-5:00",
                        "Odessa",
-                       "45693",
+                       "104",
                        "9B",
                        "North",
                        7),
             new Flight("2008-05-01T07:34:42-5:00",
                        "2008-05-01T07:34:42-5:00",
                        "Kiev",
-                       "45693",
+                       "105",
                        "9B",
                        "North",
                        7)
 
         };
 
-        public void PrintFlightsInfo()
+        public void PrintAllFlightsInfo()
         {
             foreach (var item in flights)
             {
@@ -59,14 +59,59 @@ namespace AirlineTask
             Console.WriteLine("idi nahuy");
         }
 
-        public void ShowPassengersByFlightNumber()
+        public void SearchPassengersByFlightNumber()
         {
-            
-            foreach (var item in flights)
+            Console.WriteLine("Enter the flight number (example : 102)");
+            string inputFlightNumber = Console.ReadLine();
+
+
+            foreach (var flight in flights)
             {
-                foreach (var secondItem in item.flightPassengers)
+                foreach (var passenger in flight.flightPassengers)
                 {
-                    secondItem.ShowInfo();
+                    if (flight.FlightNumber.Equals(inputFlightNumber))
+                    {
+                        passenger.ShowInfo();
+                    }
+                }
+            }
+        }
+
+        public void SearchPassengersByName()
+        {
+            Console.WriteLine("Enter the passenger Name or Lastname");
+            string inputNameOrLastName = Console.ReadLine();
+
+
+            foreach (var flight in flights)
+            {
+                foreach (var passenger in flight.flightPassengers)
+                {
+                    if (passenger.Name.ToLower().Contains(inputNameOrLastName) ||
+                        passenger.Surname.ToLower().Contains(inputNameOrLastName))
+                    {
+                        Console.WriteLine(flight.FlightNumber);
+                        passenger.ShowInfo();
+                    }
+                }
+            }
+        }
+
+        public void SearchPassengersByPassport()
+        {
+            Console.WriteLine("Enter the passenger's passport");
+            string passport = Console.ReadLine();
+
+
+            foreach (var flight in flights)
+            {
+                foreach (var passenger in flight.flightPassengers)
+                {
+                    if (passenger.Passport.Equals(passport))
+                    {
+                        Console.WriteLine(flight.FlightNumber);
+                        passenger.ShowInfo();
+                    }
                 }
             }
         }
