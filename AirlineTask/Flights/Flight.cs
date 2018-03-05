@@ -78,7 +78,7 @@ namespace AirlineTask.Flights
         }
 
 
-        public List<Passenger> AddPassenger()
+        public void AddPassenger()
         {
             Console.WriteLine("Enter your Firstname:");
             string passengerName = Console.ReadLine();
@@ -117,8 +117,9 @@ namespace AirlineTask.Flights
                                      ticketPrice);
             flightPassengers.Add(passenger);
 
+            ShowPassengers();
 
-            return flightPassengers;
+
         }
 
 

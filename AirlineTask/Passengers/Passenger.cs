@@ -32,13 +32,13 @@ namespace AirlineTask.Passengers
                         string airClass,
                         double ticketPrice)
         {
-            Name = name;
-            Surname = surName;
-            Nationality = nationality;
-            Passport = passport;
-            Birthday = DateTime.Parse(birthday);
-            Sex = (Sex)sex;
-            ticket = new Ticket(airClass, ticketPrice);
+            this.Name = name;
+            this.Surname = surName;
+            this.Nationality = nationality;
+            this.Passport = passport;
+            this.Birthday = DateTime.Parse(birthday);
+            this.Sex = (Sex)sex;
+            this.ticket = new Ticket(airClass, ticketPrice);
         }
 
         public virtual void ShowInfo()
@@ -61,8 +61,8 @@ namespace AirlineTask.Passengers
 
             public Ticket(string airClass,double ticketPrice)
             {
-                Class = airClass;
-                Price = ticketPrice;
+                this.Class = airClass;
+                this.Price = ticketPrice;
             }
         }
     }

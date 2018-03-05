@@ -157,11 +157,21 @@ namespace AirlineTask
                                     flightStatus));
 
             PrintAllFlightsInfo();
-
-
-
         }
 
+        public void AddPassengerOnFlight()
+        {
+            Console.WriteLine("Enter flight number");
+            string inputFlightNumber = Console.ReadLine();
+
+            foreach (var flight in flights)
+            {
+                if (flight.FlightNumber.Equals(inputFlightNumber))
+                {
+                    flight.AddPassenger();
+                }
+            }
+        }
     }
 
 

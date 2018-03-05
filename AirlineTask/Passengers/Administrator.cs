@@ -48,7 +48,8 @@ namespace AirlineTask.Passengers
                                 1 - Printing all flight’s passengers by flight number
                                 2 - Searching passengers by Name or Last Name
                                 3 - Searching passengers by Passport
-                                4 - Add Flight");
+                                4 - Add Flight
+                                5 - Add Passenger on Flight");
 
             string text = Console.ReadLine();
 
@@ -71,6 +72,9 @@ namespace AirlineTask.Passengers
 
                 case "4":
                     terminal.AddFlight();
+                    break;
+                case "5":
+                    terminal.AddPassengerOnFlight();
                     break;
 
                 default:
