@@ -8,6 +8,8 @@ using AirlineTask.Passengers;
 
 namespace AirlineTask
 {
+    //TODO: This class is a classical example of a functionality that usually expose services (also called as managers) in multilayered architecture.
+    //Therefore I would call this class correspondently: FlightManager/FlightService or something like this.
     public sealed class Terminal
     {
 

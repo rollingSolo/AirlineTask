@@ -20,6 +20,7 @@ namespace AirlineTask.Passengers
         {
 
         }
+        //TODO: Don't leave unused code (the constructor below has 0 references).
         public Administrator(string name,
                              string surName,
                              string nationality,
@@ -40,6 +41,9 @@ namespace AirlineTask.Passengers
         {
 
         }
+
+        //TODO: The code in the method below is partly similar to the code of the same method of 'Worker' class.
+        //That should be avoided - all the repetitive code should be encapsulated in a separate methods.
         public override void ShowTerminalCommands()
         {
             Terminal terminal = new Terminal();

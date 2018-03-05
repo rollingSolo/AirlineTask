@@ -1,4 +1,5 @@
-﻿using System;
+﻿//TODO: Remove unused 'using's (here and in all files).
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,12 @@ using AirlineTask.Passengers;
 
 namespace AirlineTask
 {
+    //TODO: Better not to rename Program class. Though the name you chose is very intuitive, anyone will be looking for 'Program' file first.
+    //TODO: I would put to 'Passengers' folder only the classes that are passengers. Otherwise classes location is not very obvious.
+    //TODO: There is a single responsibility principle in OOP: one class should be responsible for one action. 
+    //For example, your 'Passenger' class holds and returns information for passenger - it's the responsibity of the class.
+    //It shouldn't simultenuosly write to the console. Please, reconsider all your classes using this principle.
+    //I would encapsulate all logic that writes to console in one class. Other classes should delegate this operation to it.
     class Executor
     {
         static void Main(string[] args)
@@ -39,7 +46,9 @@ namespace AirlineTask
             }
         }
 
-
+        //TODO: this method could be moved to a separate class. By the way, it is the implementation of the factory method pattern :)
+        //Therefore, you can call it 'PassengerFactory' (or any other factory based on what class it will return).
+        //And use AccessLevel instead of string as an argument.
         static Passenger CheckIdentity(string identityInput)
         {
             
@@ -53,7 +62,7 @@ namespace AirlineTask
                     
                 case "3":
                     return new User();
-                    break;
+                    break;//TODO: remove the compilator warning
                 default:
                     throw new FormatException("Incorrect input");
             }

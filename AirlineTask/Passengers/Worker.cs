@@ -20,7 +20,7 @@ namespace AirlineTask.Passengers
         {
 
         }
-
+        //TODO: Remove unused constructor.
         public Worker(string name,
                      string surName,
                      string nationality,
@@ -42,7 +42,7 @@ namespace AirlineTask.Passengers
 
         }
 
-
+        //TODO: Remove unused method.
         public void Show()
         {
             Console.WriteLine(this.ToString());
