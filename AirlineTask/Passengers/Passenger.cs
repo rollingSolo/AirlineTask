@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace AirlineTask.Passengers
 {
+    //TODO: Well, that's a tricky thing, that abstract class for all menu users is Passenger. On the one hand, Administrator Or User can really be a passenger.
+    //On the other hand, for the purpose of this software roles are used only for menu. Therefore I believe it's better not to mix roles with passengers.
+    //(E.I. the class 'Passenger' won't be abstract and will hold only passenger info relevant for a flight).
     public abstract class Passenger
     {
         public string Name { get; set; }
@@ -54,6 +57,7 @@ namespace AirlineTask.Passengers
         public abstract void ShowTerminalCommands();
         
 
+        //TODO: One class - one file
         public class Ticket
         {
             public string Class { get; set; }

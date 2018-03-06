@@ -14,6 +14,10 @@ namespace AirlineTask.Flights
         public string FlightNumber { get; }
         public Tuple<string, string> TerminalAndGates { get; }
         public FlightStatus FlightStatus { get; }
+
+        //TODO: it's better to create a separate class that holds all the default data and populate it where needed. 
+        //Populating the list as it is done below means each flight has the same passengers.
+        //TODO: flightPassengers fields should be private (or a read only property).
         public List<Passenger> flightPassengers = new List<Passenger>()
         {
             new User("Vasiliy",
@@ -68,6 +72,7 @@ namespace AirlineTask.Flights
 
         public void GetFlightInfo()
         {
+            //TODO: The method wich is named as Get..., should return some value. Here it would be better to return a string.
             Console.WriteLine($"Flight № {this.FlightNumber} \r\n" +
                 $"Arrival: {this.ArrivalAndDeparture.Item1} \r\n" +
                 $"Departure: {this.ArrivalAndDeparture.Item2} \r\n" +
