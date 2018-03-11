@@ -6,20 +6,16 @@ using System.Threading.Tasks;
 
 namespace AirlineTask.Passengers
 {
-    //TODO: Well, that's a tricky thing, that abstract class for all menu users is Passenger. On the one hand, Administrator Or User can really be a passenger.
-    //On the other hand, for the purpose of this software roles are used only for menu. Therefore I believe it's better not to mix roles with passengers.
-    //(E.I. the class 'Passenger' won't be abstract and will hold only passenger info relevant for a flight).
-    public abstract class Passenger
+    public class Passenger
     {
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        protected string Nationality { get; set; }
+        public string Name { get; }
+        public string Surname { get; }
+        protected string Nationality { get; }
         public string Passport { get; }
         protected DateTime Birthday { get; }
-        protected Sex Sex { get; set; }
+        protected Sex Sex { get; }
         protected Ticket ticket;
-        public abstract AccessLevels AccessLevel { get; }
-
+        
 
         public Passenger()
         {
@@ -44,9 +40,9 @@ namespace AirlineTask.Passengers
             this.ticket = new Ticket(airClass, ticketPrice);
         }
 
-        public virtual void ShowInfo()
+        public virtual string GetPassengerInfo()
         {
-            Console.WriteLine($"Name: {this.Name}\r\n" +
+            return String.Format($"Name: {this.Name}\r\n" +
                               $"Last Name: {this.Surname}\r\n" +
                               $"Passport: {this.Passport}\r\n" +
                               $"Airplane Class: {this.ticket.Class}\r\n"+
@@ -54,20 +50,13 @@ namespace AirlineTask.Passengers
                               $"Nationality: {this.Nationality}\r\n" +
                               $"Sex: {this.Sex}\r\n");
         }
-        public abstract void ShowTerminalCommands();
+        public virtual void ShowTerminalCommands()
+        {
+
+        }
         
 
-        //TODO: One class - one file
-        public class Ticket
-        {
-            public string Class { get; set; }
-            public double Price { get; }
-
-            public Ticket(string airClass,double ticketPrice)
-            {
-                this.Class = airClass;
-                this.Price = ticketPrice;
-            }
-        }
+        
+        
     }
 }

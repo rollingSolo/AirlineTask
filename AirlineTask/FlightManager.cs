@@ -8,9 +8,7 @@ using AirlineTask.Passengers;
 
 namespace AirlineTask
 {
-    //TODO: This class is a classical example of a functionality that usually expose services (also called as managers) in multilayered architecture.
-    //Therefore I would call this class correspondently: FlightManager/FlightService or something like this.
-    public sealed class Terminal
+    public sealed class FlightManager
     {
 
         private List<Flight> flights = new List<Flight>()
@@ -50,12 +48,11 @@ namespace AirlineTask
         {
             foreach (var item in flights)
             {
-                item.GetFlightInfo();
+                Console.WriteLine(item.GetFlightInfo());
             }
         }
 
         
-
         public void SearchPassengersByFlightNumber()
         {
             Console.WriteLine("Enter the flight number (example : 102)");
@@ -68,7 +65,7 @@ namespace AirlineTask
                 {
                     if (flight.FlightNumber.Equals(inputFlightNumber))
                     {
-                        passenger.ShowInfo();
+                        Console.WriteLine(passenger.GetPassengerInfo()); 
                     }
                 }
             }
@@ -84,11 +81,11 @@ namespace AirlineTask
             {
                 foreach (var passenger in flight.flightPassengers)
                 {
-                    if (passenger.Name.ToLower().Contains(inputNameOrLastName) ||
-                        passenger.Surname.ToLower().Contains(inputNameOrLastName))
+                    if (passenger.Name.Contains(inputNameOrLastName) ||
+                        passenger.Surname.Contains(inputNameOrLastName))
                     {
                         Console.WriteLine(flight.FlightNumber);
-                        passenger.ShowInfo();
+                        Console.WriteLine(passenger.GetPassengerInfo()); 
                     }
                 }
             }
@@ -107,7 +104,7 @@ namespace AirlineTask
                     if (passenger.Passport.Equals(passport))
                     {
                         Console.WriteLine(flight.FlightNumber);
-                        passenger.ShowInfo();
+                        Console.WriteLine(passenger.GetPassengerInfo());
                     }
                 }
             }
@@ -161,7 +158,7 @@ namespace AirlineTask
             PrintAllFlightsInfo();
         }
 
-        public void AddPassengerOnFlight()
+        public List<Flight> AddPassengerOnFlight()
         {
             Console.WriteLine("Enter flight number");
             string inputFlightNumber = Console.ReadLine();
@@ -171,8 +168,11 @@ namespace AirlineTask
                 if (flight.FlightNumber.Equals(inputFlightNumber))
                 {
                     flight.AddPassenger();
+                    return flights;
                 }
             }
+
+            return flights;
         }
     }
 

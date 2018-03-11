@@ -42,17 +42,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Executor.cs" />
+    <Compile Include="Passengers\PassengersFactory.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Flights\Flight.cs" />
     <Compile Include="Flights\FlightStatus.cs" />
-    <Compile Include="Passengers\AccessLevels.cs" />
+    <Compile Include="AccessLevels.cs" />
     <Compile Include="Passengers\Administrator.cs" />
     <Compile Include="Passengers\Passenger.cs" />
-    <Compile Include="Passengers\Sex.cs" />
+    <Compile Include="Sex.cs" />
+    <Compile Include="Ticket.cs" />
     <Compile Include="Passengers\User.cs" />
     <Compile Include="Passengers\Worker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Terminal.cs" />
+    <Compile Include="FlightManager.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

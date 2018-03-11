@@ -8,14 +8,6 @@ namespace AirlineTask.Passengers
 {
     public class User : Passenger
     {
-        public override AccessLevels AccessLevel
-        {
-            get
-            {
-                return AccessLevels.User;
-            }
-        }
-
         public User()
         {
 
@@ -44,7 +36,7 @@ namespace AirlineTask.Passengers
 
         public override void ShowTerminalCommands()
         {
-            Terminal terminal = new Terminal();
+            FlightManager terminal = new FlightManager();
             Console.WriteLine("Hi please press enter to see all flights");
 
             Console.ReadLine();
