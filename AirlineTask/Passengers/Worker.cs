@@ -8,49 +8,16 @@ namespace AirlineTask.Passengers
 {
     public class Worker:Passenger
     {
-        public override AccessLevels AccessLevel
-        {
-            get
-            {
-                return AccessLevels.Worker;
-            }
-        }
 
         public Worker()
         {
 
         }
-        //TODO: Remove unused constructor.
-        public Worker(string name,
-                     string surName,
-                     string nationality,
-                     string passport,
-                     string birthday,
-                     int sex,
-                     string airClass,
-                     double ticketPrice) :
-
-                    base(name,
-                        surName,
-                        nationality,
-                        passport,
-                        birthday,
-                        sex,
-                        airClass,
-                        ticketPrice)
-        {
-
-        }
-
-        //TODO: Remove unused method.
-        public void Show()
-        {
-            Console.WriteLine(this.ToString());
-        }
-
+        
+       
         public override void ShowTerminalCommands()
         {
-            Terminal terminal = new Terminal();
+            FlightManager terminal = new FlightManager();
             Console.WriteLine(@"What are you looking for?
                                 0 - Printing all flights
                                 1 - Printing all flight’s passengers by flight number

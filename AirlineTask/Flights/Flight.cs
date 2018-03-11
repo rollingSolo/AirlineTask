@@ -18,9 +18,9 @@ namespace AirlineTask.Flights
         //TODO: it's better to create a separate class that holds all the default data and populate it where needed. 
         //Populating the list as it is done below means each flight has the same passengers.
         //TODO: flightPassengers fields should be private (or a read only property).
-        public List<Passenger> flightPassengers = new List<Passenger>()
+        public readonly List<Passenger> flightPassengers = new List<Passenger>()
         {
-            new User("Vasiliy",
+            new Passenger("Vasiliy",
                      "Petrovich",
                      "Kumys",
                      "BT228337",
@@ -30,7 +30,7 @@ namespace AirlineTask.Flights
                      228),
 
 
-            new User("Svetlana",
+            new Passenger("Svetlana",
                      "Petrovna",
                      "Kumys",
                      "BT228449",
@@ -38,7 +38,7 @@ namespace AirlineTask.Flights
                      1,
                      "Premium",
                      449),
-            new User("Svetlana",
+            new Passenger("Svetlana",
                      "Petrovna",
                      "Kumys",
                      "BT228449",
@@ -70,10 +70,10 @@ namespace AirlineTask.Flights
         }
 
 
-        public void GetFlightInfo()
+        public string GetFlightInfo()
         {
-            //TODO: The method wich is named as Get..., should return some value. Here it would be better to return a string.
-            Console.WriteLine($"Flight № {this.FlightNumber} \r\n" +
+           return String.Format(
+                $"Flight № {this.FlightNumber} \r\n" +
                 $"Arrival: {this.ArrivalAndDeparture.Item1} \r\n" +
                 $"Departure: {this.ArrivalAndDeparture.Item2} \r\n" +
                 $"Flight Number: {this.FlightNumber} \r\n" +
@@ -83,7 +83,7 @@ namespace AirlineTask.Flights
         }
 
 
-        public void AddPassenger()
+        public List<Passenger> AddPassenger()
         {
             Console.WriteLine("Enter your Firstname:");
             string passengerName = Console.ReadLine();
@@ -122,9 +122,7 @@ namespace AirlineTask.Flights
                                      ticketPrice);
             flightPassengers.Add(passenger);
 
-            ShowPassengers();
-
-
+            return flightPassengers;
         }
 
 
@@ -132,7 +130,7 @@ namespace AirlineTask.Flights
         {
             foreach (var item in flightPassengers)
             {
-                item.ShowInfo();
+                Console.WriteLine(item.GetPassengerInfo()); 
                 
             }
         }
